@@ -1,0 +1,15 @@
+<p id='location'>
+        {{#address.city}}
+            {{address.city}}, {{address.country}} |
+        {{/address.city}}
+        <!-- {{^address.city}}
+            {{address.country}} |
+        {{/address.city}}  -->
+        {{#job}}
+            {{job}}, {{company}}
+        {{/job}}
+        {{^job}}
+            <font color="#CF5300">Available for hire!</font>
+        {{/job}}
+
+</p>

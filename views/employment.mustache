@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <center>
+        <a class="go-back" href="/unemployed">Available for Hire</a>
+        <a class="go-back" href="/employed">Employed</a>
+    </center>
+    <div class='user'>
+        
+        {{#userData}}
+        <a href='/user/{{id}}'><div class='single-user'>
+            <div><img src='{{avatar}}'></div>
+            <h4>{{name}}</h4>
+            
+            <p id='location'>
+                    {{#address.city}}
+                        {{address.city}}, {{address.country}} |
+                    {{/address.city}}
+                    {{^address.city}}
+                        {{address.country}} |
+                    {{/address.city}} 
+                    {{#job}}
+                        {{job}}, {{company}}
+                    {{/job}}
+                    {{^job}}
+                        <font color="#CF5300">Available for hire!</font>
+                    {{/job}}
+            
+            </p>
+            
+        </div>
+        </a>
+        {{/userData}} 
+        
+
+
+
+    </div>
+    
+</body>
+</html>

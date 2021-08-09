@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+<body>
+    <center>
+        <img src="./charlies.png" class="logo" />
+        <h3 class="headline">Charlie's on Spring</h3>
+        <h3 class="headline">Local Craft Beer Menu</h3>
+        <!-- <a class="go-back" href="/unemployed">Available for Hire</a>
+        <a class="go-back" href="/employed">Employed</a> -->
+    </center>
+    <div class='beer-container'>
+
+
+        {{#userData}}
+        <div class="single-beer">
+            <div class="beer-img"><img src='{{img_url}}'></div>
+            <div class="beer-name">{{beer_brewery}}: {{beer_name}}</div>
+              <div class="beer-type"><b>Beer Type:</b> {{beer_type}}</div>
+              <div class="beer-abv"><b>ABV:</b> {{beer_abv}}</div>
+              <div class="beer-description"><b>Description:</b> {{beer_description}}</div>
+              <div class="beer-pack"><b>Type of Pack:</b> {{pack_format}}</div>
+              <div class="untappd-link"><a href="{{untappd_link}}">View on Untappd</a></div>
+
+        <!-- removed -->
+
+
+        </div>
+
+        {{/userData}}
+
+
+
+
+    </div>
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+</body>
+</html>

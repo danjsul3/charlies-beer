@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <link href='../styles.css' rel='stylesheet'>
+    </head>
+    <body>
+        <center><a class="go-back" href="#" onclick="history.go(-1)">Go Back</a></center>
+        <div id='container'>
+            <div id='top-div'>
+                <div id='avatar'>
+                    <img src="{{avatar}}">
+                </div>
+                <div>
+                    <div id='details'>
+                        <h1>{{name}}</h1>
+                        
+
+                        <p id='location'>
+                        {{#address.city}}
+                            {{address.city}}, {{address.country}} |
+                        {{/address.city}}
+                        {{^address.city}}
+                            {{address.country}} |
+                        {{/address.city}} 
+                        {{#job}}
+                            {{job}}, {{company}}
+                        {{/job}}
+                        {{^job}}
+                            <font color="#CF5300">Available for hire!</font>
+                        {{/job}}
+                        </p>
+                        <p id='contact'>{{email}} | {{phone}}</p>
+                    </div>
+                </div>
+            </div>
+            <div id='bottom-div'>
+                <div id='ed-label'>
+                <p>
+                {{#university}}
+                    Education
+                {{/university}}
+                {{^university}}
+
+                {{/university}}
+                </p>
+                </div>
+                <div id='ed'>
+                <p>
+                {{#university}}
+                    {{university}}
+                {{/university}}
+                {{^university}}
+
+                {{/university}}
+                </p>
+                </div>
+                <div id='skills-label'>
+                <p>Skills</p>
+                </div>
+                <div id='skills'>
+                <ul>
+                {{#skills}}
+                    <li>{{.}}</li>
+                {{/skills}}
+                </ul>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
