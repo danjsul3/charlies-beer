@@ -3,7 +3,7 @@ const mustacheExpress = require ('mustache-express');
 const app = express();
 const mongo = require('mongodb');
 const MongoClient = require('mongodb').MongoClient;
-const dbUrl = 'mongodb+srv://danny:K1rkw00d@cluster0.6oqdu.mongodb.net/test';
+const dbUrl = 'mongodb://localhost:27017/test';
 
 const port = process.env.PORT || 3000;
 
@@ -17,8 +17,8 @@ app.use(express.static('public'));
 
 app.get('/', (request, response) => {
     MongoClient.connect(dbUrl, async (err, db) => {
-        var userData = beerData
-        // var userData = await db.collection('beers').find({}).toArray();
+        // var userData = beerData
+        var userData = await db.collection('data').find({}).toArray();
         response.render('index', {userData: userData})
     });
 });
