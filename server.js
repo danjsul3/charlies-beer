@@ -3,7 +3,7 @@ const mustacheExpress = require ('mustache-express');
 const app = express();
 const mongo = require('mongodb');
 const MongoClient = require('mongodb').MongoClient;
-const dbUrl = 'mongodb://localhost:27017/data';
+const dbUrl = 'mongodb+srv://danny:K1rkw00d@cluster0.6oqdu.mongodb.net/test';
 
 const port = process.env.PORT || 3000;
 
