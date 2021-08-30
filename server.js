@@ -17,8 +17,8 @@ app.use(express.static('public'));
 
 app.get('/', (request, response) => {
     MongoClient.connect(dbUrl, async (err, db) => {
-        // var userData = beerData
-        var userData = await db.collection('data').find({}).toArray();
+        var userData = beerData
+        // var userData = await db.collection('data').find({}).toArray();
         response.render('index', {userData: userData})
     });
 });
